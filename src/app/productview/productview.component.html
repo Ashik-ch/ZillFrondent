@@ -1,0 +1,34 @@
+<section class="light">
+  <div class="container py-5 mt-5">
+    <div class="h1 text-center text-dark" id="pageHeaderTitle">Apply </div>
+
+    <article class="postcard light blue" *ngFor="let t of elements">
+      <a class="postcard__img_link">
+
+        <img class="postcard__img" src="{{t.img}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="text-danger"><a>{{t.name}}</a></h1>
+
+        <div class="postcard__bar"></div>
+        <div class="text-danger"> <b>Details:</b> {{t.company}}</div>
+        <div class="text-dark">Description: {{t.description}} Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Eligendi, fugiat
+          asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium
+          maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto
+          quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div> <br>
+        <div class="text-dark"> <b>MRO :</b> {{t.cost}}</div>
+        <div class="text-dark"> <b>GST : </b> {{t.gst}}</div>
+        <div class="text-dark"> <b>Total :</b> {{(t.cost)+ (t.cost*(t.gst/100))}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item play blue">
+
+          </li>
+        </ul>
+        <button class="btn btn-outline-success m-4 " (click)="buy(t)">Add to Cart</button>
+
+      </div>
+    </article>
+
+  </div>
+</section>
